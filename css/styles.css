@@ -1,0 +1,28 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: antiquewhite;    
+}
+
+.title{
+   text-align: center;
+}
+
+.menu-bar{
+    width: inherit;
+    height: 100px;
+    background-color: chocolate;
+}
+
+.menu-item{
+    display: inline-block;
+}
+
+.container{
+    height: 700px;
+    width: 950px;   
+    background-color: white;
+    position: static;
+    margin: auto;
+    box-shadow: 10px 10px 10px 5px #876C23;
+}
