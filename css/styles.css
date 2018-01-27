@@ -16,7 +16,13 @@ body{
 
 .menu-item{
     display: inline-block;
+    margin: 20px;
 }
+
+.menu-item h3 {
+    display: inline-block;
+}
+
 
 .container{
     height: 700px;
