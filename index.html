@@ -7,6 +7,7 @@
 
     <title>TrashMan | Life Stimulation Game</title>
     <link href="css/styles.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
     
 <body>
@@ -70,27 +71,28 @@
     <div class="content">
         <section id="section-1" class="content-current">
             <div class="message">
+                health
                 </div>
         </section>
         <section id="section-2">
             <div class="message">
-               
+               food
             </div>
         </section>
         <section id="section-3">
             <div class="message">
-               
+               job
             </div>
         </section> 
         <section id="section-4">
             <div class="message">
-               
+               travel
             </div>
         </section>
     
         <section id="section-5">
             <div class="message">
-               
+               hous
             </div>
         </section>
         
@@ -98,5 +100,12 @@
 </div>
         
     </div>
+    <script>
+    $('.tabs li').click(function(event){
+    event.preventDefault();
+    $('.tabs li').removeClass('tab-current')
+    $(this).addClass('tab-current');
+});
+    </script>
 </body>
 </html>
