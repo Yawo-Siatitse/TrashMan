@@ -7,7 +7,7 @@
 
     <title>TrashMan | Life Stimulation Game</title>
     <link href="css/styles.css" type="text/css" rel="stylesheet">
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
     
 <body>
@@ -51,51 +51,92 @@
         </div>
         
         <div class="image-container">
-            <a><img id="img" src="images/Trash_Man.png"></a> 
+            <a><img id="img" src="images/Trash_Man.png" alt="state"></a> 
         </div>
         
         
-    <div id="tabs" class="tabs">
-    <nav>
-        <ul>
-            <li class="tab-current"><a href="#section-1"><span style="color: #ffdd00">Health</span></a></li>
-            <li><a href="#section-2"><span style="color: #ffdd00">Food</span></a></li>
-            <li><a href="#section-3"><span style="color: #ffdd00">Job</span></a></li>
-            <li><a href="#section-3"><span style="color: #ffdd00">Travel</span></a></li>
-            <li><a href="#section-3"><span style="color: #ffdd00">House</span></a></li>
-        </ul>
-    </nav>
-    <div class="content">
-        <section id="section-1" class="content-current">
-            <div class="message">
-                </div>
-        </section>
-        <section id="section-2">
-            <div class="message">
-               
-            </div>
-        </section>
-        <section id="section-3">
-            <div class="message">
-               
-            </div>
-        </section> 
-        <section id="section-4">
-            <div class="message">
-               
-            </div>
-        </section>
-    
-        <section id="section-5">
-            <div class="message">
-               
-            </div>
-        </section>
-        
-    </div><!-- /content -->
-</div>
+    <div class="table">
+        <div class="option">
+            <h2>Health</h2>
+            <h4>Cost</h4>
+            <button id="sleep">Sleep</button>
+        </div>
+        <div class="option">
+            <h2>Food</h2>
+            <h4>Cost</h4>
+            <button id="eat">Eat</button>
+        </div>
+        <div class="option">
+            <h2>Job</h2>
+            <h4>Salary</h4>
+            <button id="begger">Begger</button>
+            <h4>Salary</h4>
+             <button id="sweeper">Floor Sweeper</button>
+            <h4>Salary</h4>
+             <button id="janitor">Janitor</button>
+            <h4>Salary</h4>
+             <button id="cashier">Cashier</button>
+            <h4>Salary</h4>
+             <button id="manager">Manager</button>
+            <h4>Salary</h4>
+             <button id="ceo">CEO</button>
+        </div>
+        <div class="option">
+            <h2>Travel</h2>
+            <h4>Cost</h4>
+            <button id="slippers">Slippers</button>
+            <h4>Cost</h4>
+             <button id="shoes">Shoes</button>
+            <h4>Cost</h4>
+             <button id="bike">Bike</button>
+            <h4>Cost</h4>
+             <button id="car">Car</button>
+            <h4>Cost</h4>
+             <button id="jet">Jet</button>
+        </div>
+         <div class="option">
+            <h2>Travel</h2>
+            <h4>Cost</h4>
+            <button id="box">Cardboard Box</button>
+            <h4>Cost</h4>
+             <button id="garage">Garage</button>
+            <h4>Cost</h4>
+             <button id="apartement">Apartement</button>
+            <h4>Cost</h4>
+             <button id="houseBy">House</button>
+            <h4>Cost</h4>
+             <button id="mansion">Mansion</button>
+        </div>       
         
     </div>
+        
+  
+   
+
+        
+    </div>
+    <script>
+    $('.tabs li').click(function(event){
+    event.preventDefault();
+    $('.tabs li').removeClass('tab-current')
+    $(this).addClass('tab-current');
+});
+    </script>
+    
+        <script>
+        $('.click').click(function() {
+    // get the contents of the link that was clicked
+    var linkText = $(this).attr("href");
+    var id = Document.getElementById(linkText);
+    var Text = $(id).text();
+
+    // replace the contents of the div with the link text
+    $('#content').html(Text);
+
+    // cancel the default action of the link by returning false
+    return false;
+});
+    </script>
 <script src="./js/scripts.js" charset="utf-8"></script>
 </body>
 </html>
