@@ -11,7 +11,7 @@
   </head>
     
 <body>
-    <h1 class="title">Trash Man</h1>
+    <h1 id="title">Trash Man</h1>
     <div class="container">
         <div class="menu-bar">
             
@@ -23,13 +23,11 @@
             <div class="menu-item">
                 <h3>Health: </h3>
                 <h3 id="healthPer">0</h3>
-                <h3>%</h3>
             </div>            
             
             <div class="menu-item">
                 <h3>Food: </h3>
                 <h3 id="foodPer">0</h3>
-                <h3>%</h3>
             </div>
             
              <div class="menu-item">
@@ -39,8 +37,7 @@
             
             <div class="menu-item">
                 <h3>Money: </h3>
-                <h3>USD </h3>
-                <h3 id="accountUSD">0</h3>
+                <h3 id="money">0</h3>
             </div>  
             
             <div class="menu-item">
@@ -54,7 +51,7 @@
         </div>
         
         <div class="image-container">
-            <a href="https://placeholder.com"><img src="http://via.placeholder.com/350x250"></a> 
+            <a><img id="img" src="images/Trash_Man.png"></a> 
         </div>
         
         
@@ -64,8 +61,8 @@
             <li class="tab-current"><a href="#section-1"><span style="color: #ffdd00">Health</span></a></li>
             <li><a href="#section-2"><span style="color: #ffdd00">Food</span></a></li>
             <li><a href="#section-3"><span style="color: #ffdd00">Job</span></a></li>
-            <li><a href="#section-3"><span style="color: #ffdd00">Travel</span></a></li>
-            <li><a href="#section-3"><span style="color: #ffdd00">House</span></a></li>
+            <li><a href="#section-4"><span style="color: #ffdd00">Travel</span></a></li>
+            <li><a href="#section-5"><span style="color: #ffdd00">House</span></a></li>
         </ul>
     </nav>
     <div class="content">
@@ -107,5 +104,6 @@
     $(this).addClass('tab-current');
 });
     </script>
+<script src="./js/scripts.js" charset="utf-8"></script>
 </body>
 </html>
