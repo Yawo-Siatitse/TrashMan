@@ -29,6 +29,7 @@ document.getElementById('house').innerHTML = housing;
 
 //Function for health
 document.getElementById('healthPer').onclick = healthUp;
+document.getElementById('sleep').onclick = healthUp;
 function healthUp(){
     if(dead){
         return;
@@ -58,6 +59,7 @@ function healthUp(){
 }
 
 //Function for food
+document.getElementById('eat').onclick = foodUp;
 document.getElementById('foodPer').onclick = foodUp;
 function foodUp(){
     if(dead){
@@ -88,6 +90,7 @@ function foodUp(){
 }
 
 //Function for job
+document.getElementById('work').onclick = work;
 document.getElementById('JobTitle').onclick = work;
 function work(){
     if(dead){
@@ -170,6 +173,11 @@ function work(){
 
 //Function for travel
 document.getElementById('travel').onclick = transportation;
+document.getElementById('slippers').onclick = transportation;
+document.getElementById('shoes').onclick = transportation;
+document.getElementById('bike').onclick = transportation;
+document.getElementById('car').onclick = transportation;
+document.getElementById('jet').onclick = transportation;
 function transportation(){
     if(dead){
         return;
@@ -213,6 +221,11 @@ function transportation(){
 
 
 //Function for housing
+document.getElementById('box').onclick = home;
+document.getElementById('garage').onclick = home;
+document.getElementById('apartment').onclick = home;
+document.getElementById('houseBy').onclick = home;
+document.getElementById('mansion').onclick = home;
 document.getElementById('house').onclick = home;
 function home(){
     if(dead){
