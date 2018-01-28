@@ -33,7 +33,7 @@ body{
 
 .container{
     height: 700px;
-    width: 950px;   
+    width: 1000px;   
     background-color: white;
     position: static;
     margin: auto;
@@ -44,3 +44,19 @@ body{
 .table{
     display: flex;
 }
+
+.option{
+    width: 200px;
+    text-align: center;
+}
+
+.option h4{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.option button{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
