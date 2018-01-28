@@ -58,19 +58,23 @@
     <div id="tabs" class="tabs">
     <nav>
         <ul>
-            <li class="tab-current"><a href="#section-1"><span style="color: #ffdd00">Health</span></a></li>
-            <li><a href="#section-2"><span style="color: #ffdd00">Food</span></a></li>
-            <li><a href="#section-3"><span style="color: #ffdd00">Job</span></a></li>
-            <li><a href="#section-4"><span style="color: #ffdd00">Travel</span></a></li>
-            <li><a href="#section-5"><span style="color: #ffdd00">House</span></a></li>
+            <li class="tab-current" ><a href="#section-1" class="click"><span style="color: #ffdd00">Health</span></a></li>
+            <li><a href="#section-2" class="click"><span style="color: #ffdd00">Food</span></a></li>
+            <li><a href="#section-3" class="click"><span style="color: #ffdd00">Job</span></a></li>
+            <li><a href="#section-4" class="click"><span style="color: #ffdd00">Travel</span></a></li>
+            <li><a href="#section-5" class="click"><span style="color: #ffdd00">House</span></a></li>
         </ul>
     </nav>
-    <div class="content">
+        
+            
+        
+    <div id="content">
         <section id="section-1" class="content-current">
             <div class="message">
-                health
-                </div>
+               
+            </div>
         </section>
+        
         <section id="section-2">
             <div class="message">
                food
@@ -102,6 +106,19 @@
     event.preventDefault();
     $('.tabs li').removeClass('tab-current')
     $(this).addClass('tab-current');
+});
+    </script>
+    
+        <script>
+        $('.click').click(function() {
+    // get the contents of the link that was clicked
+    var linkText = $(this).text();
+
+    // replace the contents of the div with the link text
+    $('#content').html(linkText);
+
+    // cancel the default action of the link by returning false
+    return false;
 });
     </script>
 <script src="./js/scripts.js" charset="utf-8"></script>
