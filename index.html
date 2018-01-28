@@ -51,82 +51,68 @@
         </div>
         
         <div class="image-container">
-            <a><img id="img" src="images/Trash_Man.png"></a> 
+            <a><img id="img" src="images/Trash_Man.png" alt="state"></a> 
         </div>
         
         
-    <div id="tabs" class="tabs">
-    <nav>
-        <ul>
-            <li class="tab-current" ><a href="#section-1" class="click"><span style="color: #ffdd00">Health</span></a></li>
-            <li><a href="#section-2" class="click"><span style="color: #ffdd00">Food</span></a></li>
-            <li><a href="#section-3" class="click"><span style="color: #ffdd00">Job</span></a></li>
-            <li><a href="#section-4" class="click"><span style="color: #ffdd00">Travel</span></a></li>
-            <li><a href="#section-5" class="click"><span style="color: #ffdd00">House</span></a></li>
-        </ul>
-    </nav>
+    <div class="table">
+        <div class="option">
+            <h2>Health</h2>
+            <h4>Cost</h4>
+            <button id="sleep">Sleep</button>
+        </div>
+        <div class="option">
+            <h2>Food</h2>
+            <h4>Cost</h4>
+            <button id="eat">Eat</button>
+        </div>
+        <div class="option">
+            <h2>Job</h2>
+            <h4>Salary</h4>
+            <button id="begger">Begger</button>
+            <h4>Salary</h4>
+             <button id="sweeper">Floor Sweeper</button>
+            <h4>Salary</h4>
+             <button id="janitor">Janitor</button>
+            <h4>Salary</h4>
+             <button id="cashier">Cashier</button>
+            <h4>Salary</h4>
+             <button id="manager">Manager</button>
+            <h4>Salary</h4>
+             <button id="ceo">CEO</button>
+        </div>
+        <div class="option">
+            <h2>Travel</h2>
+            <h4>Cost</h4>
+            <button id="slippers">Slippers</button>
+            <h4>Cost</h4>
+             <button id="shoes">Shoes</button>
+            <h4>Cost</h4>
+             <button id="bike">Bike</button>
+            <h4>Cost</h4>
+             <button id="car">Car</button>
+            <h4>Cost</h4>
+             <button id="jet">Jet</button>
+        </div>
+         <div class="option">
+            <h2>Travel</h2>
+            <h4>Cost</h4>
+            <button id="box">Cardboard Box</button>
+            <h4>Cost</h4>
+             <button id="garage">Garage</button>
+            <h4>Cost</h4>
+             <button id="apartement">Apartement</button>
+            <h4>Cost</h4>
+             <button id="houseBy">House</button>
+            <h4>Cost</h4>
+             <button id="mansion">Mansion</button>
+        </div>       
         
-            
+    </div>
         
-    <div id="content">
-        <section id="section-1" class="content-current">
-            <div class="message">
-                <ul>
-                    <li><button>Trash</button></li>
-                    <li><button>Public Market</button></li>
-                    <li><button>Groceries Store</button></li>
-                    <li><button>Super Market</button></li>
-                    <li><button>Private Chef</button></li>
-                    <li><button>Team of Chefs</button></li>
-                </ul>
-            </div>
-        </section>
-        
-        <section id="section-2">
-            <div class="message">
-                <ul>
-                </ul>
-            </div>
-        </section>
-        <section id="section-3">
-            <div class="message">
-                 <ul>
-                     <li><button>Begger</button></li>
-                     <li><button>Floor Sweeper</button></li>
-                     <li><button>Janitor</button></li>
-                     <li><button>Cashier</button></li>
-                     <li><button>Manager</button></li>
-                     <li><button>CEO</button></li>
-                     
-                </ul>
-            </div>
-        </section> 
-        <section id="section-4">
-            <div class="message">
-             <ul>
-                 <li><button>Slippers</button></li>
-                 <li><button>Shoes</button></li>
-                 <li><button>Bike</button></li>
-                 <li><button>Car</button></li>
-                 <li><button>Jet</button></li>
-            </ul>
-            </div>
-        </section>
-    
-        <section id="section-5">
-            <div class="message">
-               <ul>
-                   <li><button>Cardboard Box</button></li>
-                   <li><button>Garage</button></li>
-                   <li><button>Apartement</button></li>
-                   <li><button>House</button></li>
-                   <li><button>Mansion</button></li>
-                </ul>
-            </div>
-        </section>
-        
-    </div><!-- /content -->
-</div>
+  
+   
+
         
     </div>
     <script>
@@ -140,10 +126,12 @@
         <script>
         $('.click').click(function() {
     // get the contents of the link that was clicked
-    var linkText = $(this).text();
+    var linkText = $(this).attr("href");
+    var id = Document.getElementById(linkText);
+    var Text = $(id).text();
 
     // replace the contents of the div with the link text
-    $('#content').html(linkText);
+    $('#content').html(Text);
 
     // cancel the default action of the link by returning false
     return false;
